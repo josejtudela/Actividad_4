@@ -1,0 +1,35 @@
+<header id="navbarRegistro">
+    {{> navbar}}
+</header>
+<section id="registro">
+    <div class="containerGrid">
+        <h1>Registro</h1>
+        <a href="/login">¿Ya estas registrado?</a>
+        <form id="register" action="/registro" method="POST">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Usuario" name="nameUser" required="true">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" name="email" required="true">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="Password1" placeholder="Contraseña" name="passOne"required="true">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="Password2" placeholder="Confirma Contraseña" name="passTwo"required="true">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="acept" required="true">
+                <label class="form-check-label">Acepto</label>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Registro</button>
+        </form>
+        <br>
+        <div id="messages" class="alert alert-danger invisible" role="alert"></div>
+        {{messages}}
+    </div>
+</section>
+<script src="/javascripts/registro.js"></script>
+
+{{> footer}}

@@ -1,0 +1,313 @@
+/*### HEADER ###*/
+/*box-sizing:content-box*/
+#cabecera {
+  background: url("../images/nathan-anderson-316188-unsplash_opt.jpg") no-repeat fixed top center;
+  height: 100vh;
+}
+
+#navbarRegistro{
+  background: #080f5d !important;
+}
+
+.navbar-brand{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.navbar-brand p{
+  color: black;
+}
+
+section {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+#navBarWebz {
+  background: transparent !important;
+}
+
+#navBarWebz a,
+i {
+  color: white;
+}
+
+#navBarWebz a:hover,
+i:hover {
+  color: gray;
+}
+
+#bannerHeader{
+  padding-top: 25vh;
+}
+
+#bannerHeader i {
+  color: black;
+}
+
+.titleFigure {
+  top: 0px;
+  padding: 8px;
+  background-color: #080f5d;
+  color: #fff;
+  width: 92.3%;
+}
+
+.priceFigure {
+  color: #080f5d;
+  padding: 15px;
+  top: 0px;
+  right: 15px;
+}
+
+/* CSS Grid Layaout */
+
+.containerCSSGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(2, minmax(16em,auto)); */
+  grid-gap: 1em;
+}
+
+.rrssbottom{
+  display:none;
+}
+
+#carouselDestinos{
+  display: none;
+} 
+
+
+.item{
+  position: relative;
+}
+
+.titleFigureGrid {
+  position: absolute;
+  top:0;
+  background-color: #080f5d;
+  color: #fff;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  width: 100%;
+}
+
+.priceGrid{
+  color: #080f5d;
+  position: absolute;
+  top:0;
+  right:0;
+  padding:1em;
+}
+
+/* button{
+  position: relative;
+  left: 150px
+}  */
+iframe{
+   position: relative;
+  float: left;
+  left: 80px;
+}
+.formulario{
+  position: relative;
+  float :right;
+}
+
+#quienesSomos{
+    background-image: url(../images/back.jpeg);
+
+}
+#containerQuienesSomos{
+  height: 500px;
+
+}
+#colocar{
+    top: 100px;
+    width: 400px;
+    background-color: white;
+
+}
+
+.entrada1{
+  margin-left: 20px;
+  padding: 4px;
+}
+.entrada2{
+  margin-top: 10px;
+  margin-left: 20px;
+}
+textarea{
+  margin-top: 10px;
+  margin-left: 20px;
+  padding: 4px;
+}
+form{
+  margin-top: 40px;
+}
+#boton1 i{
+    color: #000;
+ }
+ #boton2 {
+    background-color: #0B0B61;
+    color:yellow;
+    border-color:#0B0B61;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.flexQuienes{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#boton3 i {
+  color: black;
+}
+#hr1{
+  margin: 0;
+  height:5px;
+  width: 180px;
+  background-color:yellow;
+  border:none;
+}
+#hr2{
+  margin: 0;
+  height:5px;
+  width: 20px;
+  background-color:blue;
+  border:none;
+}
+
+#hr2{
+  margin: 0;
+  height:5px;
+  width: 20px;
+  background-color:blue;
+  border:none;
+ }
+
+footer{
+  background-color:#040936;
+  padding: 1em;
+}
+
+.gridFooter{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+}
+
+.itemFooter2 ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.itemFooter2 a{
+  color: white;
+}
+
+.itemFooter3 .buttonFooter{
+  position: relative;
+  left: 0;
+}
+#item{
+  position: relative;
+  top: -20px;
+}
+
+/* CSS section registro */
+#registro{
+  background-color: rgb(168, 168, 168);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerGrid{
+  width: 30vw;
+  border-radius: 10px;
+  padding: 2em;
+  background-color: rgba( 248, 249, 249, 0.5)
+}
+
+@media (max-width:1200px){
+  .containerCSSGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, minmax(16em,auto)); */
+    grid-gap: 0.5em;
+  }
+
+  .rrss{
+    display:none;
+  }
+  .rrssbottom{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .rrssbottom .nav-item{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  #navBarWebz {
+    background: #080f5d !important;
+  }
+  .navbar-brand p{
+    color: white;
+  }
+
+}
+
+@media (max-width:700px){
+  .containerCSSGrid {
+    display:none
+  }
+
+  .rrss{
+    display:none;
+  }
+  .rrssbottom{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .rrssbottom .nav-item{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  #navBarWebz {
+    background: #080f5d !important;
+  }
+  .navbar-brand p{
+    color: white;
+  }
+  
+  #carouselDestinos{
+    display: block;
+  } 
+
+  .itemFooter2{
+    display: none;
+  }
+
+  .gridFooter{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  iframe{
+    position: relative;
+    left: 0px;
+ }
+
+}

@@ -1,0 +1,24 @@
+{
+    "development": {
+        "PORT": 3000,
+        "MySQL": {
+            "host": "localhost",
+            "user": "root",
+            "password": "",
+            "database": "geekstravels_test"
+        }
+    },
+    "test": {
+        "PORT": 3000,
+        "MySQL_URL": "localhost"
+    },
+    "production": {
+        "PORT": 3000,
+        "MySQL": {
+            "host": "localhost",
+            "user": "root",
+            "password": "",
+            "database": "geekstravels"
+        }
+    }
+}
