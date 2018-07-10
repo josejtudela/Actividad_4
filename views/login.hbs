@@ -1,5 +1,24 @@
 <header id="navbarRegistro">
     {{> navbar}}
 </header>
-<h1>login</h1>
+<section id="registro">
+    <div class="containerGrid">
+        <h1>Login</h1>
+        <a href="/registro">¿Aun no estas registrado?</a>
+        <form id="register" action="/login" method="POST">
+            <div class="form-group">
+                <label for="nameUser">Usuario:</label>
+                <input type="text" class="form-control" placeholder="Usuario" name="nameUser" required="true">
+            </div>
+            <div class="form-group">
+                <label for="passOne">Contraseña:</label>
+                <input type="password" class="form-control" id="Password1" placeholder="Contraseña" name="passOne"required="true">
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+        <br>
+        <div id="messages" class="alert alert-danger invisible" role="alert"></div>
+        {{messages}}
+    </div>
+</section>
 {{> footer}}

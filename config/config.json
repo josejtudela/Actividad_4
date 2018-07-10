@@ -1,6 +1,6 @@
 {
     "development": {
-        "PORT": 3000,
+        "PORT": 3001,
         "MySQL": {
             "host": "localhost",
             "user": "root",
@@ -9,8 +9,13 @@
         }
     },
     "test": {
-        "PORT": 3000,
-        "MySQL_URL": "localhost"
+        "PORT": 8080,
+        "MySQL": {
+            "host": "localhost",
+            "user": "root",
+            "password": "",
+            "database": "geekstravels_test"
+        }
     },
     "production": {
         "PORT": 3000,

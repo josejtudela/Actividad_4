@@ -22,6 +22,14 @@
     </div>
     <ul class="navbar-nav rrss mr-auto">
     <li class="nav-item">
+        <a class="nav-link">
+        {{#with user}}
+        <i class="fa fa-user"></i>
+            {{name}}
+        {{/with}}
+        </a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="#">
         <i class="fab fa-twitter"></i>
         </a>

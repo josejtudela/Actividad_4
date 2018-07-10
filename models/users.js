@@ -13,6 +13,16 @@ Users.fetchAll = (callback) => {
     })
 }
 
+Users.fetchUser = (USER, callback) => {
+    if (!CONN) return callback(conError);
+
+    CONN.query("SELECT * FROM users WHERE user=?;",[USER], (error, user) => {
+        if (error) return callback(error);
+
+        return callback(null, user);
+    })
+}
+
 Users.insert = (USER, callback) => {
     if (!CONN) return callback(conError);
 

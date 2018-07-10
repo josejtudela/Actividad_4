@@ -1,20 +1,9 @@
-// let passwords = document.querySelectorAll('input[type="password"]');
-// let messages = document.getElementById("messages");
-
-// let handlePassword = (event) => {
-//     passwords[0].value === passwords[1].value?
-//         messages.innerText = ''
-//         :messages.innerText = "Las contraseñas deben ser iguales";
-// } 
-
-// [...passwords].forEach(pass => pass.addEventListener('keyup',handlePassword));
-
 const form = document.getElementById("register")
 let messages = document.getElementById("messages")
 form.addEventListener('submit', function(ev){
     
     const inputs = form.getElementsByTagName('input');
-    
+    console.log(inputs);
     let fillFields = Object.keys(inputs).every(key => {
         return inputs[key].value !== "";
     })
@@ -31,3 +20,4 @@ form.addEventListener('submit', function(ev){
         messages.innerText = "Las contraseñas deben ser iguales";
     }
 })
+
