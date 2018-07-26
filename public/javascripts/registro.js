@@ -3,7 +3,7 @@ let messages = document.getElementById("messages")
 form.addEventListener('submit', function(ev){
     
     const inputs = form.getElementsByTagName('input');
-    console.log(inputs);
+
     let fillFields = Object.keys(inputs).every(key => {
         return inputs[key].value !== "";
     })
@@ -19,5 +19,7 @@ form.addEventListener('submit', function(ev){
         messages.classList.remove('invisible');
         messages.innerText = "Las contraseñas deben ser iguales";
     }
+
+    localStorage.setItem('User', iputs.nameUser);
 })
 

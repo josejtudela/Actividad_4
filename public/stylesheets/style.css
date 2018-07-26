@@ -235,6 +235,15 @@ footer{
   background-color: rgba( 248, 249, 249, 0.5)
 }
 
+#pageNotFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 48vh;
+  padding: 2em; 
+}
+
 @media (max-width:1200px){
   .containerCSSGrid {
     display: grid;

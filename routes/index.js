@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const middleware = require('../middleware/middleware');
 const Users = require('../models/users');
+const Destinations = require('../models/destinos');
 
 const {
 	hash, compare
@@ -10,18 +11,14 @@ const {
 const saltRounds = 10;
 
 /* GET home page. */
-router.get('/', middleware.fecthAllDestinos ,function (req, res, next) {
-	// Destinos.fetchAll((error, destinos) => {
-	// 	if(error) return res.status(500).send(error)
-		let destinos = req.body.destinos;
-		console.log(req.session.username)
-		res.status(200).render('index', {
+router.get('/',function (req, res, next) {
+	Destinations.findAll().then((destinos) => {
+		res.render('index', {
 			destinos,
 			user: {name: req.session.username},
 			layout: 'template'
 		});
-	// })
-
+	})
 });
 
 router.get('/registro', function (req, res, next) {
@@ -43,15 +40,21 @@ router.post('/registro', middleware.validarRegistro, function (req, res, next) {
 	hash(userParams.passOne, saltRounds)
 		.then(hashsed => {
 			user.password = hashsed
-			Users.insert(user, (error, userID) => {
-				if (error) {
-					req.flash('error', error.sqlMessage);
-					res.redirect('/registro');
-				} else {
-					req.session.username = user.user;
-					res.redirect('/');
+			Users.findOrCreate({
+				where: {user: user.user},
+				defaults: {
+					email: user.email,
+					password: user.password
 				}
-			});
+			}).spread((user, created) => {
+				if(!created){
+					req.flash('error', `El usuario ya existe`);
+					res.redirect('/registro');
+				}
+				req.session.username = user.user;
+				res.redirect('/');
+			})
+
 		})
 		.catch(error => {
 			req.flash('error', error);

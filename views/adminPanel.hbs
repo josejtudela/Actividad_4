@@ -1,0 +1,28 @@
+<header id="navbarRegistro">
+    {{> navbar}}
+</header>
+<section class="container">
+   <h2>Bienvenido al área de administración</h2>
+   <h4>Desde aquín podrás crear viajes y gestionar ya existentes</h4>
+   <table class="table">
+       <thead>
+           <tr>
+               <th>ID</th>
+               <th>Viaje</th>
+               <th>Reserva</th>
+               <th>Precio</th>
+           </tr>
+       </thead>
+       <tbody>
+            {{#each destinos}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{name}}</td>
+                    <td>{{reserve}}</td>
+                    <td>{{price}}</td>
+                </tr>
+            {{/each}}
+       </tbody>
+   </table>
+</section>
+{{> footer}}

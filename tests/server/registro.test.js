@@ -5,13 +5,11 @@ iconv.encodings = encodings;
 import request from "supertest";
 import app from "../../app";
 
-console.log(process.env.MySQL)
-
 describe("Index.js", () => {
     describe("GET /index", () => {
-        // test("Main Page", async () => {
-        //     const response = await request(app).get('/');
-        //     expect(response.statusCode).toBe(200);
+        test("Main Page", async () => {
+            const response = await request(app).get('/');
+            expect(response.statusCode).toBe(200);
             // .then(res => {
             //     expect(res.statusCode).toBe(200);
             //     done();
@@ -19,13 +17,13 @@ describe("Index.js", () => {
             // .catch(err => {
             //     if (err) throw err;
             // })
-        // })
-        test("Main page", (done) => {
-            request(app)
-                .get("/")
-                .expect(200)
-                .end(done)
         })
+        // test("Main page", (done) => {
+        //     request(app)
+        //         .get("/")
+        //         .expect(200)
+        //         .end(done)
+        // })
     })
 
     // describe("GET /registro", () => {

@@ -22,7 +22,8 @@
     "morgan": "~1.9.0",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
-    "node-pre-gyp": "^0.10.2"
+    "node-pre-gyp": "^0.10.2",
+    "sequelize": "^4.38.0"
   },
   "jest": {
     "rootDir": "./tests/",
